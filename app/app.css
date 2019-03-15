@@ -1,0 +1,44 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+ /* border-bottom: 0.1em solid black;
+  margin-bottom: 2em;*/
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+ 
+}
+/* unvisited link */
+.getPolicyDetails a:link {
+  color: red;
+}
+
+/* visited link */
+.getPolicyDetails a:visited {
+  color: green;
+}
+
+/* mouse over link */
+.getPolicyDetails a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+.getPolicyDetails a:active {
+  color: blue;
+}
+.getPolicyDetails{
+  color:blue;
+
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  
+  padding-right: 0.3em;
+}

@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header text-muted">Policies
+
+    </div>
+    <div class="card-body">
+
+        <div class="table-responsive-sm ">
+            <div class="container">
+
+                <table class="table  table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>LIC Policies</th>
+                            <th>Entry Age</th>
+                            <th>Maximum Maturity</th>
+                            <th>Policy Term </th>
+                            <th>Minimum Premium/Purchase Price </th>
+                            <th>Minimum Sum Assured Term </th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="policy in policy">
+
+                            <td ng-click="getPolicyDetails()" class="getPolicyDetails"><a>{{policy.name}}</a></td>
+                            <td>{{policy.entryage}}</td>
+                            <td>{{policy.maturityage}}</td>
+                            <td>{{policy.policyterm}}</td>
+                            <td>{{policy.minimumpremium}}</td>
+                            <td>{{policy.sumassured}}</td>
+
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-footer" ng-show="policyObj.showFlag">
+
+
+        <div class="card">
+            <div class="card-header">Header</div>
+            <div class="card-body">Content</div>
+            <div class="card-footer">Footer</div>
+        </div>
+    </div>
+</div>
