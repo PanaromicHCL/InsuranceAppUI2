@@ -1,16 +1,18 @@
 angular.module('petApp').service('restApiSerivce', function ($http, $log, $rootScope) {
     this.policyList = function () {
-      //  alert('policyList');
+        alert('policyList');
         // Simple GET request example:
-        return $http({
+         $http({
             method: 'GET',
-            url: 'http://10.117.189.212:8080/PetStore/pets'
+            url: 'http://10.117.189.212:8081/Insurance/api/policies'
         }).then(function successCallback(response) {
-
-            return response.data;
+            $log.info(response);
+                alert(JSON.stringify(response));
+            //return response.data;
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
+            alert(JSON.stringify(response));
         });
     }
 
@@ -21,7 +23,7 @@ angular.module('petApp').service('restApiSerivce', function ($http, $log, $rootS
         // Simple GET request example:
         return $http({
             method: 'GET',
-            url: 'http://10.117.189.212:8080/PetStore/pets'
+            url: ''
         }).then(function successCallback(response) {
 
             return response.data;

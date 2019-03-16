@@ -19,10 +19,10 @@
                         </tr>
 
                     </thead>
-                    <tbody ng-repeat="policy in policy">
+                    <tbody ng-repeat="policy in policyList">
                         <tr>
-                            <td class="getPolicyDetails"><a data-toggle="collapse"
-                                    data-target="#{{policy.name}}">{{policy.name}}</a></td>
+                            <td class="getPolicyDetails"><a  style="color:blue" data-toggle="collapse"
+                                    data-target="#{{policy.name}}"  ng-click="getPolicyDetails(policy.id)">{{policy.name}}</a></td>
                             <td>{{policy.entryage}} </td>
                             <td>{{policy.maturityage}}</td>
                             <td>{{policy.policyterm}}</td>
@@ -30,13 +30,17 @@
                             <td>{{policy.sumassured}}</td>
 
                         </tr>
-                        <tr ng-show="showcolspan">
+                        <tr ng-show="true">
                             <td colspan="5">
                                 <span id="{{policy.name}}" class="collapse">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    <!-- Or let Bootstrap automatically handle the layout -->
+                                    <div class="row">
+                                        <div class="col-12">text to be display</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">here will show</div>
+
+                                    </div>
                                 </span>
                             </td>
                         </tr>
