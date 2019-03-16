@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-        <div class="table-responsive-sm ">
+        <div>
             <div class="container">
 
                 <table class="table  table-striped">
@@ -19,20 +19,27 @@
                         </tr>
 
                     </thead>
-                    <tbody>
-                        <tr ng-repeat="policy in policy">
-
-                            <td ng-click="getPolicyDetails()" class="getPolicyDetails"><a>{{policy.name}}</a></td>
-                            <td>{{policy.entryage}}</td>
+                    <tbody ng-repeat="policy in policy">
+                        <tr>
+                            <td class="getPolicyDetails"><a data-toggle="collapse"
+                                    data-target="#{{policy.name}}">{{policy.name}}</a></td>
+                            <td>{{policy.entryage}} </td>
                             <td>{{policy.maturityage}}</td>
                             <td>{{policy.policyterm}}</td>
                             <td>{{policy.minimumpremium}}</td>
                             <td>{{policy.sumassured}}</td>
 
-
                         </tr>
-
-
+                        <tr ng-show="showcolspan">
+                            <td colspan="5">
+                                <span id="{{policy.name}}" class="collapse">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </span>
+                            </td>
+                        </tr>
 
                     </tbody>
                 </table>

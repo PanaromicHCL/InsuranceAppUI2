@@ -12,13 +12,8 @@ angular.module('petApp', [
         controller: 'policyListController'
       }).
       when('/vender', {
-        templateUrl: 'vender/signUp-template.html',
-        controller: 'signUpController'
-      }).when('/pets', {
-        template: '<pet-list></pet-list>'
-      }).when('/addpet', {
-        templateUrl: 'addNewPet/addpet-template.html',
-        controller: 'addPetController'
+      //  templateUrl: 'vender/signUp-template.html',
+       // controller: 'signUpController'
       })
       .otherwise({ redirectTo: '/signIn' });
   }]);
